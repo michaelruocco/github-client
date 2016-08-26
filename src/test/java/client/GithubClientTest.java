@@ -13,7 +13,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class GithubClientTest {
 
-    private final GithubClient client = new GithubClient();
+    private final GithubClient client = new GithubClient(new FakeGithub());
 
     @Test
     public void shouldReturnUser() {
@@ -50,9 +50,9 @@ public class GithubClientTest {
 
         @Override
         public Response get(String url) {
-            if (url.equals("https://github-api-mirror.herokuapp.com/users/hackeryou"))
+            if (url.endsWith("/users/hackeryou"))
                 return getUserResponse();
-            else if(url.equals("https://api.github.com/users/HackerYou/repos"))
+            else if(url.endsWith("/users/HackerYou/repos"))
                 return getUserReposResponse();
             return repoLangaguesResponse();
 
