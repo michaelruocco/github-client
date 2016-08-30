@@ -1,5 +1,6 @@
 package client;
 
+import client.GithubClient.GithubClientBuilder;
 import org.junit.Rule;
 import org.junit.Test;
 import uk.co.mruoc.fake.github.FakeGithubRule;
@@ -20,7 +21,9 @@ public class GithubClientTest {
             .setResponseHostUrl(URL)
             .build();
 
-    private final GithubClient client = new GithubClient(URL);
+    private final GithubClient client = new GithubClientBuilder()
+            .setHostUrl(URL)
+            .build();
 
     @Test
     public void shouldReturnUser() {
@@ -55,7 +58,7 @@ public class GithubClientTest {
 
     private static class TestUser extends User {
 
-        public TestUser() {
+        private TestUser() {
             setLogin("hackeryou");
             setPublicRepos(35);
             setReposUrl(URL + "/users/HackerYou/repos");
@@ -65,7 +68,7 @@ public class GithubClientTest {
 
     private static class TestRepo1 extends Repo {
 
-        public TestRepo1() {
+        private TestRepo1() {
             User user = new User();
             user.setLogin("hackeryou");
             user.setReposUrl(URL + "/users/HackerYou/repos");
@@ -78,7 +81,7 @@ public class GithubClientTest {
 
     private static class TestRepo2 extends Repo {
 
-        public TestRepo2() {
+        private TestRepo2() {
             User user = new User();
             user.setLogin("hackeryou");
             user.setReposUrl(URL + "/users/HackerYou/repos");

@@ -8,18 +8,13 @@ import java.util.*;
 
 public class GithubClient {
 
-    private static final String DEFAULT_HOST_URL = "https://api.github.com/";
     private final JsonConverter jsonConverter = new JsonConverter();
-
-    private final String hostUrl;
     private final HttpClient http = new SimpleHttpClient();
 
-    public GithubClient() {
-        this(DEFAULT_HOST_URL);
-    }
+    private final String hostUrl;
 
-    public GithubClient(String hostUrl) {
-        this.hostUrl = hostUrl;
+    private GithubClient(GithubClientBuilder builder) {
+        this.hostUrl = builder.hostUrl;
     }
 
     public List<String> getUserLanguages(String username) {
@@ -46,6 +41,22 @@ public class GithubClient {
         Response response = http.get(languagesUrl);
         Map<String, String> languageMap = jsonConverter.toMap(response.getBody());
         return new ArrayList<>(languageMap.keySet());
+    }
+
+    public static class GithubClientBuilder {
+
+        private static final String DEFAULT_HOST_URL = "https://api.github.com/";
+        private String hostUrl = DEFAULT_HOST_URL;
+
+        public GithubClientBuilder setHostUrl(String hostUrl) {
+            this.hostUrl = hostUrl;
+            return this;
+        }
+
+        public GithubClient build() {
+            return new GithubClient(this);
+        }
+
     }
 
 }
