@@ -20,10 +20,7 @@ public class GithubClient {
     public List<String> getUserLanguages(String username) {
         User user = getUser(username);
         List<Repo> repos = getRepos(user.getReposUrl());
-        Set<String> languages = new HashSet<>();
-        for (Repo repo : repos)
-            languages.addAll(getLanguages(repo.getLanguagesUrl()));
-        return new ArrayList<>(languages);
+        return toUniqueLanguages(repos);
     }
 
     public User getUser(String username) {
@@ -41,6 +38,16 @@ public class GithubClient {
         Response response = http.get(languagesUrl);
         Map<String, String> languageMap = jsonConverter.toMap(response.getBody());
         return new ArrayList<>(languageMap.keySet());
+    }
+
+    private List<String> toUniqueLanguages(List<Repo> repos) {
+        Set<String> languages = new HashSet<>();
+        repos.forEach(r -> languages.addAll(getLanguages(r.getLanguagesUrl())));
+        return toList(languages);
+    }
+
+    private List<String> toList(Set<String> set) {
+        return new ArrayList<>(set);
     }
 
     public static class GithubClientBuilder {
