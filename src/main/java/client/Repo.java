@@ -9,7 +9,7 @@ public class Repo {
     @JsonProperty("languages_url")
     private String languagesUrl;
     private String name;
-    private String owner;
+    private User owner;
 
     public String getLanguagesUrl() {
         return languagesUrl;
@@ -19,7 +19,7 @@ public class Repo {
         return name;
     }
 
-    public String getOwner() {
+    public User getOwner() {
         return owner;
     }
 
@@ -31,7 +31,7 @@ public class Repo {
         this.name = name;
     }
 
-    public void setOwner(String owner) {
+    public void setOwner(User owner) {
         this.owner = owner;
     }
 

@@ -10,7 +10,7 @@ public class User {
     @JsonProperty("public_repos")
     private int publicRepos;
 
-    private String owner;
+    private String login;
 
     public String getReposUrl() {
         return reposUrl;
@@ -28,12 +28,12 @@ public class User {
         this.publicRepos = publicRepos;
     }
 
-    public String getOwner() {
-        return owner;
+    public String getLogin() {
+        return login;
     }
 
-    public void setOwner(String owner) {
-        this.owner = owner;
+    public void setLogin(String owner) {
+        this.login = login;
     }
 
 }

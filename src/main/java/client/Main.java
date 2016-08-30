@@ -7,7 +7,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        GithubClient githubClient = new GithubClient(new SimpleHttpClient());
+        GithubClient githubClient = new GithubClient();
         List<String> languages = githubClient.getUserLanguages("hackeryou");
         languages.stream().forEach(e -> System.out.println(e));
     }

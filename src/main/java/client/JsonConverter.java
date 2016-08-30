@@ -1,6 +1,7 @@
 package client;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.CollectionType;
 import com.fasterxml.jackson.databind.type.TypeFactory;
@@ -11,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 import static com.fasterxml.jackson.core.JsonParser.Feature.*;
+import static com.fasterxml.jackson.databind.DeserializationFeature.*;
 
 public class JsonConverter {
 
@@ -20,6 +22,7 @@ public class JsonConverter {
 
     public JsonConverter() {
         mapper.configure(ALLOW_UNQUOTED_FIELD_NAMES, true);
+        mapper.configure(FAIL_ON_UNKNOWN_PROPERTIES, false);
     }
 
     public User toUser(String json) {
