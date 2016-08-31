@@ -33,7 +33,7 @@ dependencies {
     compile 'com.github.michaelruocco:http-client:2.0.0'
     compile 'com.github.michaelruocco:fake-github:2.0.0'
 
-    testCompile 'junit:junit:4.11'
+    testCompile 'junit:junit:4.12'
     testCompile 'org.assertj:assertj-core:3.5.2'
 }
 
