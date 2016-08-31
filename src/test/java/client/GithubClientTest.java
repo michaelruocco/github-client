@@ -56,6 +56,18 @@ public class GithubClientTest {
         assertThat(languages.get(3)).isEqualTo("CoffeeScript");
     }
 
+    @Test
+    public void shouldReturnUserLanguages() {
+        List<String> languages = client.getUserLanguages(USER_NAME);
+
+        assertThat(languages.size()).isEqualTo(5);
+        assertThat(languages.get(0)).isEqualTo("CSS");
+        assertThat(languages.get(1)).isEqualTo("CoffeeScript");
+        assertThat(languages.get(2)).isEqualTo("HTML");
+        assertThat(languages.get(3)).isEqualTo("JavaScript");
+        assertThat(languages.get(4)).isEqualTo("Ruby");
+    }
+
     private static class TestUser extends User {
 
         private TestUser() {

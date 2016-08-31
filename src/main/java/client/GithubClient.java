@@ -20,7 +20,9 @@ public class GithubClient {
     public List<String> getUserLanguages(String username) {
         User user = getUser(username);
         List<Repo> repos = getRepos(user.getReposUrl());
-        return toUniqueLanguages(repos);
+        List<String> languages = toUniqueLanguages(repos);
+        Collections.sort(languages);
+        return languages;
     }
 
     public User getUser(String username) {
