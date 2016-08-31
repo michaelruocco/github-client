@@ -1,4 +1,4 @@
-package client;
+package uk.co.mruoc.github.client;
 
 import uk.co.mruoc.http.client.HttpClient;
 import uk.co.mruoc.http.client.Response;

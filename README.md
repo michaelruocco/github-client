@@ -22,3 +22,24 @@ You can run the tests for this project by running the following command:
 ```
 gradlew clean build
 ```
+
+## Running the Application
+
+You can run the application by running the following command:
+
+```
+gradlew run
+```
+
+When the program runs it will print a list of languages for whichever
+user has been hardcoded into the main method, this is currently "michaelruocco"
+but you can obviously change it if you wish to see your own languages listed.
+
+## Note
+
+GitHub has the ability to be able to throttle the number of requests you make
+so if you run the application too many times it may start to fail if you are being
+limited by GitHub, this is one of the reasons why it is good that the tests use
+the fake GitHub since you can get responses that mirror the real API without actually
+hitting it.
+

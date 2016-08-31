@@ -2,6 +2,7 @@ apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'jacoco'
 apply plugin: 'com.github.kt3k.coveralls'
+apply plugin: 'application'
 
 buildscript {
     repositories {
@@ -34,4 +35,8 @@ dependencies {
 
     testCompile 'junit:junit:4.11'
     testCompile 'org.assertj:assertj-core:3.5.2'
+}
+
+run {
+    mainClassName = 'uk.co.mruoc.github.client.Main'
 }

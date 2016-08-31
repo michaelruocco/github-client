@@ -1,4 +1,4 @@
-package client;
+package uk.co.mruoc.github.client;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

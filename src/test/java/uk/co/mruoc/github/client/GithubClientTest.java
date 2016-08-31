@@ -1,10 +1,13 @@
-package client;
+package uk.co.mruoc.github.client;
 
-import client.GithubClient.GithubClientBuilder;
+import uk.co.mruoc.github.client.GithubClient;
+import uk.co.mruoc.github.client.GithubClient.GithubClientBuilder;
 import org.junit.Rule;
 import org.junit.Test;
 import uk.co.mruoc.fake.github.FakeGithubRule;
 import uk.co.mruoc.fake.github.FakeGithubRule.FakeGithubRuleBuilder;
+import uk.co.mruoc.github.client.Repo;
+import uk.co.mruoc.github.client.User;
 
 import java.util.List;
 

@@ -1,13 +1,11 @@
-package client;
-
-import client.GithubClient.GithubClientBuilder;
+package uk.co.mruoc.github.client;
 
 import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) {
-        GithubClient githubClient = new GithubClientBuilder().build();
+        GithubClient githubClient = new GithubClient.GithubClientBuilder().build();
         List<String> languages = githubClient.getUserLanguages("michaelruocco");
         languages.stream().forEach(e -> System.out.println(e));
     }
