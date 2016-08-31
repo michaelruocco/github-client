@@ -23,7 +23,6 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories {
-    maven { url "http://bc1nxs01.tpplc.local:8081/nexus/content/groups/public" }
     mavenCentral()
 }
 
