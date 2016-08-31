@@ -1,6 +1,7 @@
 # GitHub Client
 
 [![Build Status](https://travis-ci.org/michaelruocco/github-client.svg?branch=master)](https://travis-ci.org/michaelruocco/github-client)
+[![Coverage Status](https://coveralls.io/repos/github/michaelruocco/github-client/badge.svg)](https://coveralls.io/github/michaelruocco/github-client)
 [![Dependency Status](https://www.versioneye.com/user/projects/57c6f439939fc600508e8ec7/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/57c6f439939fc600508e8ec7)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c09a98e2387b4e648485969db742c251)](https://www.codacy.com/app/michael-ruocco/github-client?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=michaelruocco/github-client&amp;utm_campaign=Badge_Grade)
 
