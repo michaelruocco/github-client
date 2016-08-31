@@ -12,7 +12,7 @@ method of the Main class is run it will print out the list of languages for
 the username that is passed into the client as a hardcoded parameter.
 
 The tests test each of the separate calls individually, but make use of the
-[fake-github](https://github.com/michaelruocco/fake-github) mock project to
+[fake-github](https://github.com/michaelruocco/fake-github) project to
 keep test code simple.
 
 ## Running the Tests
