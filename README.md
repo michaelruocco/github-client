@@ -1,5 +1,9 @@
 # GitHub Client
 
+[![Build Status](https://travis-ci.org/michaelruocco/github-client.svg?branch=master)](https://travis-ci.org/michaelruocco/github-client)
+[![Dependency Status](https://www.versioneye.com/user/projects/57c6f439939fc600508e8ec7/badge.svg?style=flat-square)](https://www.versioneye.com/user/projects/57c6f439939fc600508e8ec7)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/c09a98e2387b4e648485969db742c251)](https://www.codacy.com/app/michael-ruocco/github-client?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=michaelruocco/github-client&amp;utm_campaign=Badge_Grade)
+
 This project is a simple demonstration of how to use the [fake-github](https://github.com/michaelruocco/fake-github)
 to test client code. This is by no means a complete example but demonstrates the use
 of a separate hand coded fake. This can be preferrable to using wiremock to spin up
