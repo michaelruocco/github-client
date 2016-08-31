@@ -1,7 +1,25 @@
-group 'uk.co.mruoc'
-version '1.0-SNAPSHOT'
-
 apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'jacoco'
+apply plugin: 'com.github.kt3k.coveralls'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.kt3k.gradle.plugin:coveralls-gradle-plugin:2.0.1'
+    }
+}
+
+project.ext {
+    artifactId = "github-client"
+    group = 'uk.co.mruoc'
+    version = '1.0.0'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
     maven { url "http://bc1nxs01.tpplc.local:8081/nexus/content/groups/public" }
@@ -11,7 +29,7 @@ repositories {
 dependencies {
     compile 'com.fasterxml.jackson.core:jackson-databind:2.8.1'
     compile 'com.fasterxml.jackson.core:jackson-core:2.8.1'
-    compile 'uk.co.tpplc.library:httpclient:1.1.4'
+    compile 'com.github.michaelruocco:http-client:1.0.0'
     compile 'com.github.michaelruocco:fake-github:2.0.0'
 
     testCompile 'junit:junit:4.11'

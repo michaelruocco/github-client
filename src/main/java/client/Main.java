@@ -1,7 +1,6 @@
 package client;
 
 import client.GithubClient.GithubClientBuilder;
-import uk.co.tpplc.http.SimpleHttpClient;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
 package client;
 
-import uk.co.tpplc.http.HttpClient;
-import uk.co.tpplc.http.Response;
-import uk.co.tpplc.http.SimpleHttpClient;
+import uk.co.mruoc.http.client.HttpClient;
+import uk.co.mruoc.http.client.Response;
+import uk.co.mruoc.http.client.SimpleHttpClient;
 
 import java.util.*;
 
