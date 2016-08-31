@@ -15,7 +15,7 @@ buildscript {
 
 project.ext {
     artifactId = "github-client"
-    group = 'uk.co.mruoc'
+    group = 'com.github.michaelruocco'
     version = '1.0.0'
 }
 
