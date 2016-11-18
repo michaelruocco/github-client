@@ -27,8 +27,8 @@ repositories {
 }
 
 dependencies {
-    compile 'com.fasterxml.jackson.core:jackson-databind:2.8.4'
-    compile 'com.fasterxml.jackson.core:jackson-core:2.8.4'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.8.5'
+    compile 'com.fasterxml.jackson.core:jackson-core:2.8.5'
     compile 'com.github.michaelruocco:http-client:2.0.0'
     compile 'com.github.michaelruocco:fake-github:2.0.0'
 
